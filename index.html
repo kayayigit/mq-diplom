@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles_tablet.css">
+    <link rel="stylesheet" href="css/styles_mobile.css">
 </head>
 <body>
     <div class="pop-up pop-up__hidden">     
@@ -46,7 +48,10 @@
     <header class="header">
         <div class="header-top">
           <a href="#0" class="logo"><img alt="noemi_logo" src="svg/noemi-logo.svg"></a> 
-          <nav class="menu">  
+          <nav class="menu">
+            <button class="menu__button js-menu__button">
+              <span class="menu__button-label">открыть меню</span>
+            </button>  
             <ul class="menu-list">
                 <li class="menu-list-item"><a href="#0" class="menu-link">главная</a></li>
                 <li class="menu-list-item"><a href="#0" class="menu-link">посты</a></li>
@@ -58,6 +63,7 @@
         </nav>  
         </div>
        <div class="intro">
+        <a href="#0" class="logo__mobile"><img alt="noemi_logo" src="svg/noemi-logo.svg"></a> 
          <h1>блог о творчестве, спорте, и образе жизни</h1>  
         </div>
       </header>
@@ -66,7 +72,7 @@
           <h2>сейчас в тренде</h2>
         </div>
         <div class=trends__block>
-          <div class="trends__article-1">
+          <div class="trends__article article-1">
             <div class="trends__header">
               <ul class="trends__category">
                 <li><a href="#0" class="trends__category-item">lifestyle</a></li>
@@ -75,7 +81,7 @@
                <h2 class="trends__heading"><a href="#0">сейчас в тренде: сад на подоконники</a></h2>
             </div>
           </div>
-          <div class="trends__article-2">
+          <div class="trends__article article-2">
             <div class="trends__header">
               <ul class="trends__category">
                 <li><a href="#0" class="trends__category-item">food</a></li>
@@ -83,7 +89,7 @@
                <h2 class="trends__heading"><a href="#0">сыры на красивых  картинках из интернета: какие они на вкус?</a></h2>
             </div>
           </div>
-          <div class="trends__article-3">
+          <div class="trends__article article-3">
             <div class="trends__header">
               <ul class="trends__category">
                 <li><a href="#0" class="trends__category-item">lifestyle</a></li>
@@ -92,7 +98,7 @@
                <h2 class="trends__heading"><a href="#0">СОБИРАЕМСЯ В ПЕРВЫЙ ПОХОД В ГОРЫ</a></h2>
             </div>
           </div>
-          <div class="trends__article-4">
+          <div class="trends__article article-4">
             <div class="trends__header">
               <ul class="trends__category">
                 <li><a href="#0" class="trends__category-item">food</a></li>
@@ -121,6 +127,7 @@
                <div class="article-content">
                <p>Итак, вы в Питере. Раннее утро. Лед с рек и каналов уже ушел, запущены фонтаны города… Музеи еще закрыты. Что посмотреть?</p>
                </div>
+               <div class="article__seperator"></div>
           </article>
           </div>
           <div class="article-block">
@@ -139,6 +146,7 @@
                <div class="article-content">
                <p>Расскажем, какие упражнения выбрать и как сделать коврик для занятий йогой из того, что можно найти в шкафу.</p>
                </div>
+               <div class="article__seperator"></div>
           </article>
           </div>
           <div class="article-block">
@@ -156,7 +164,8 @@
                <div class="article-content">
                <p>Лето на носу, а с ним и музыкальные фестивали. На каком же из них вы разобьёте свою палатку?</p>
                <p>Мы составили список лучших летних фестивалей по всему миру.</p>
-               </div>    
+               </div> 
+               <div class="article__seperator"></div>   
           </article>
           </div>
           <div class="article-block">
@@ -175,6 +184,7 @@
                <div class="article-content">
                <p>Узнаем основы проектирования новых пищевых и около-пищевых опытов, вскроем физику, химию и микробиологию еды.</p>
                </div>
+               <div class="article__seperator"></div>
           </article>
           </div>
           <div class="article-block">
@@ -194,6 +204,7 @@
                <div class="article-content">
                <p>Подушки для дивана целесообразнее заказать в съемных чехлах на молнии, если потребуется чистка подушек, проще снять чехлы, чем везти подушку в химчистку.</p>
                </div>
+               <div class="article__seperator-end"></div>
           </article>
           </div>
  
@@ -319,8 +330,19 @@
         </div>
         <div class="our__products-block">
           <div class="product">
-            <div class="product__img">
-              <img alt="Подушки на диван" src="img/shop-item-desk1.jpg">
+            <div class="product__img-block">
+              <picture >
+                <source
+                media="(min-width: 1201px)"
+                srcset="img/shop-item-desk1.jpg">
+                <source
+                media="(min-width: 641px) and (max-width: 1200px)"
+                srcset="img/shop-item-tablet1.jpg">
+                <source
+                media="(max-width: 640px)"
+                srcset="img/shop-item-mobile1.jpg">
+                <img class="product__img" alt="Подушки на диван" src="img/shop-item-desk1.jpg">
+              </picture>
             </div>
             <div class="product__card-border"></div>
             <div class="product__card">
@@ -336,8 +358,19 @@
             </div>
           </div>
           <div class="product">
-            <div class="product__img">
-              <img alt="Подушки на диван" src="img/shop-item-desk2.jpg">
+            <div class="product__img-block">
+              <picture >
+                <source
+                media="(min-width: 1201px)"
+                srcset="img/shop-item-desk2.jpg">
+                <source
+                media="(min-width: 641px) and (max-width: 1200px)"
+                srcset="img/shop-item-tablet2.jpg">
+                <source
+                media="(max-width: 640px)"
+                srcset="img/shop-item-mobile2.jpg">
+                <img class="product__img" alt="кукла зайчик" src="img/shop-item-desk2.jpg">
+              </picture>
             </div>
             <div class="product__card-border"></div>
             <div class="product__card">
@@ -352,8 +385,19 @@
             </div>
           </div>
           <div class="product">
-            <div class="product__img">
-              <img alt="Подушки на диван" src="img/shop-item-desk3.jpg">
+            <div class="product__img-block">
+              <picture >
+                <source
+                media="(min-width: 1201px)"
+                srcset="img/shop-item-desk3.jpg">
+                <source
+                media="(min-width: 641px) and (max-width: 1200px)"
+                srcset="img/shop-item-tablet3.jpg">
+                <source
+                media="(max-width: 640px)"
+                srcset="img/shop-item-mobile3.jpg">
+                <img class="product__img" alt="Шестиугольная рамка" src="img/shop-item-desk3.jpg">
+              </picture>
             </div>
             <div class="product__card-border"></div>
             <div class="product__card">
