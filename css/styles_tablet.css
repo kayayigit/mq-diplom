@@ -120,15 +120,7 @@
     .article__seperator {
         display: block;
     }
-    aside {
-        width: 38%;
-    }
-    .sidebar-news-img {
-        width: 27%;
-    }
-    .sidebar-news-header {
-        width: calc(73% - 10px);
-    }
+
     .our__products {
         max-width: 1200px;
         width: 100%;

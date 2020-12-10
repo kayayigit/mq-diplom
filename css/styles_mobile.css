@@ -123,10 +123,10 @@
         width: 100%;
     }
     .product:nth-child(2n+1) {
-        margin: 0 0 27px 0;
+        margin: 0 0 47px 0;
     }
     .product:nth-child(2) {
-        margin: 0 0 27px 0;
+        margin: 0 0 47px 0;
     }
     .product__img {
         width: 100%;
